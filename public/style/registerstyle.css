@@ -122,18 +122,18 @@
     gap: 20px;
 }
 
-#container #register-page form .form-content{
+#container #register-page .form-content{
     display: flex;
     flex-direction: column;
 }
 
-#container #register-page form .form-content label{
+#container #register-page .form-content label{
     font-size: 15px;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
-#container #register-page form .form-content input{
+#container #register-page .form-content input{
     border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     height: 39px;
@@ -141,7 +141,7 @@
     padding-left: 0.5rem;
 }
 
-#container #register-page form .form-content #password-box{
+#container #register-page .form-content #password-box{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -149,14 +149,14 @@
     gap: 24px;
 }
 
-#container #register-page form .form-content #password-box .password{
+#container #register-page .form-content #password-box .password{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
 
-#container #register-page form .form-content #password-box .password #password-field{
+#container #register-page .form-content #password-box .password #password-field{
     display: flex;
     justify-content: column;
     border: 1px solid rgba(0, 0, 0, 0.25);
@@ -164,22 +164,22 @@
     gap: 12px;
 }
 
-#container #register-page form .form-content #password-box .password #password-field input{
+#container #register-page .form-content #password-box .password #password-field input{
     border: none;
     outline: none;
 }
 
-#container #register-page form .form-content #password-box .password #password-field #eye{
+#container #register-page .form-content #password-box .password #password-field #eye{
     padding-right: 0.7rem;
     padding-top: 0.5rem;
 }
 
-#container #register-page form .form-content #password-box .password #password-field #eye2{
+#container #register-page .form-content #password-box .password #password-field #eye2{
     padding-right: 0.7rem;
     padding-top: 0.5rem;
 }
 
-#container #register-page form #checkbox{
+#container #register-page #checkbox{
     display: flex;  
     flex-direction: row;
     gap: 10px;
@@ -188,22 +188,22 @@
     padding-bottom: 0.5rem;
 }
 
-#container #register-page form #checkbox input{
+#container #register-page #checkbox input{
     accent-color: red;
     width: 21px;
     height: 20px;  
 }
 
-#container #register-page form #checkbox p{
+#container #register-page #checkbox p{
     font-size: 15px; 
 }
 
-#container #register-page form #checkbox a{
+#container #register-page #checkbox a{
     font-size: 15px; 
     color: red;
 }
 
-#container #register-page form #register{ 
+#container #register-page #register{ 
     background: red;
     border-radius: 10px;
     height: 58px;
