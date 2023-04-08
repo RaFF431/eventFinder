@@ -18,13 +18,24 @@ class EventController extends Controller
     }
 
     public function viewadminEvent(){
-        $evenet = EventModel::all();
+        $event = EventModel::all();
 
         return view('adminviewEvent', compact('event'));
     }
 
     public function store(Request $req)
     {
+        $req->validate([
+            'Nama_Event' => 'required|min:8',
+            'Kategori_Event' => 'required',
+            'Deskripsi_Event' => 'required|min:20',
+            'Harga' => 'required',
+            'Tanggal_Event' => 'required',
+            'Lokasi_Event' => 'required',
+            'Nama_Organizer' => 'required',
+            'Gambar_Event' => 'required|mimes:png,jpeg,jpg,gif',
+        ]);
+
         $extension = $req->file('Gambar_Event')->getClientOriginalExtension();
         $filename = $req->Nama_Event.'_'.$req->Nama_Organizer.'.'.$extension;
         $req->file('Gambar_Event')->storeAs('/public/Event/', $filename);
@@ -37,7 +48,7 @@ class EventController extends Controller
             'Lokasi_Event' => $req->Lokasi_Event,
             'Nama_Event' => $req->Nama_Event,
             'Nama_Organizer' => $req->Nama_Organizer,
-            'Gambar_Event' => $req->Gambar_Event,
+            'Gambar_Event' => $filename,
         ]);
 
         $event = EventModel::all();

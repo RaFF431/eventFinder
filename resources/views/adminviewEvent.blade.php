@@ -29,7 +29,7 @@
                     <input type="text" name="search" placeholder="Search" autocomplete="off">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
-                <a href="addnewevent.html"><button>Add</button></a>
+                <a href="/create-event"><button>Add</button></a>
             </div>
         </div>
 

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyEvents - View Event</title>
-    <link rel="stylesheet" href="style/vtwu-style.css">
+    <link rel="stylesheet" href="{{asset('style/vtwu-style.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://kit.fontawesome.com/344429efc8.css" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/344429efc8.js" crossorigin="anonymous"></script>
@@ -16,7 +16,7 @@
     <nav>
        <div id="container">
             <div id="left">
-                <img src="assets/My Events.png" id="logo" alt="">
+                <img src="{{asset('assets/My Events.png')}}" id="logo" alt="">
                 <div class="search-bar">
                     <i class="fa fa-search" aria-hidden="true"></i>
                     <input type="text" id="search-bar" name="search" placeholder="" autocomplete="off">
@@ -35,7 +35,7 @@
    
             <div id="right">
                 <a href="" style="font-size: 18px;">Support</a>
-                <img src="assets/profile.png" id="profile" alt="">
+                <img src="{{asset('assets/profile.png')}}" id="profile" alt="">
             </div>
        </div>
     </nav>
@@ -51,11 +51,11 @@
             </div>
         </div>
 
+        @foreach ($ticket as $i)
         <div id="my-event">
-            <h4>My event</h4>
-            <p id="date">09 March 2023</p>
+            <h4>{{$i->Nama_Event}}</h4>
+            <p id="date">{{$i->Tanggal_Event}}</p>
             <div class="card">
-                @foreach ($ticket as $i)
                     
                 <div class="left-side">
                     <img src="{{asset('/storage/Event/'.$i->Gambar_Event)}}" alt="">
@@ -80,9 +80,9 @@
                         <button id="reg-btn">{{$i->Kategori_Event}}</button>
                     </div>
                 </div>
-                @endforeach
             </div>
         </div>
+        @endforeach
 
 
     </div>

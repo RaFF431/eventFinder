@@ -26,6 +26,10 @@ nav button {
   border: none;
 }
 
+.error{
+  color: red;
+}
+
 .nav-tab {
 background-color: #0a1a3b;
 }
