@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('Lokasi_Event');
             $table->string('Nama_Event');
             $table->date('Tanggal_Event');
+            $table->string('Gambar_Event');
             $table->timestamps();
         });
     }

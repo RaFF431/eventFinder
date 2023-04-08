@@ -183,7 +183,7 @@
 
                 <div class="card">
                     <div class="left-side">
-                        <img class="left-side-img" src="{{asset('picture/bebek.jpg')}}" alt="">
+                        <img class="left-side-img" src="{{asset('/storage/Event/'.$i->GambarEvent)}}" alt="">
                     <div class="event-desc">
                         <p><span style="font-weight: bolder;">{{$i->Nama_Event}} |</span><span style="font-size: 13px;"> {{$i->Nama_Organizer}}</span></p>
                         <div class="ket-tanggal" style="display: flex; gap: 0.6rem;">

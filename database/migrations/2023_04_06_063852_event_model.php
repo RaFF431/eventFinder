@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('Lokasi_Event');
             $table->string('Nama_Event');
             $table->string('Nama_Organizer');
+            $table->string('Gambar_Event');
             $table->timestamps();
         });
     }

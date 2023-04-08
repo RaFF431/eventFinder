@@ -15,5 +15,6 @@ class TicketModel extends Model
         'Lokasi_Event',
         'Nama_Event',
         'Tanggal_Event',
+        'Gambar_Event',
     ];
 }

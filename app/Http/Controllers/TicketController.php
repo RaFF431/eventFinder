@@ -24,7 +24,8 @@ class TicketController extends Controller
             'Nama_Organizer' => $ticket->Nama_Organizer,
             'Lokasi_Event' => $ticket->Lokasi_Event,
             'Nama_Event' => $ticket->Nama_Event,
-            'Tanggal_Event' => $ticket->Tanggal_Event   ,
+            'Tanggal_Event' => $ticket->Tanggal_Event,
+            'Gambar_Event' => $ticket->Gambar_Event,
         ]);
 
         $ticket = TicketModel::all();

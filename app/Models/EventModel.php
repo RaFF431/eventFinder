@@ -17,5 +17,6 @@ class EventModel extends Model
         'Lokasi_Event',
         'Nama_Event',
         'Nama_Organizer',
+        'Gambar_Event',
     ];
 }
