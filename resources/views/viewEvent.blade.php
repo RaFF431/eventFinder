@@ -15,7 +15,7 @@
     <nav>
        <div id="container">
             <div id="left">
-                <img src="assets/My Events.png" id="logo" alt="">
+                <img src="{{asset('assets/My Events.png')}}" id="logo" alt="">
                 <div class="search-bar">
                     <i class="fa fa-search" aria-hidden="true"></i>
                     <input type="text" name="search" placeholder="" autocomplete="off">
@@ -34,7 +34,7 @@
    
             <div id="right">
                 <a href="" style="font-size: 18px;">Support</a>
-                <img src="assets/profile.png" id="profile" alt="">
+                <img src="{{asset('assets/profile.png')}}" id="profile" alt="">
             </div>
        </div>
     </nav>
@@ -45,14 +45,14 @@
                 <h4>Your Event List</h4>
                 <div id="sort">
                     <p>Sort by Category</p>
-                    <img src="assets/sort.png" alt="">
+                    <img src="{{asset('assets/sort.png')}}" alt="">
                 </div>
             </div>
 
             <div id="card-container">
                 <div class="card">
                     <div class="left-side">
-                        <img src="assets/card1.png" alt="">
+                        <img src="{{asset('assets/card1.png')}}" alt="">
                     <div class="event-desc">
                         <p><span style="font-weight: bolder;">SUGA | August D TOUR IN JAKARTA - DAY 1 |</span><span style="font-size: 13px;">  SOLO-ME</span></p>
                         <div class="ket-tanggal" style="display: flex; gap: 0.6rem;">
@@ -84,7 +84,7 @@
                 </div>
                 <div class="card">
                     <div class="left-side">
-                        <img src="assets/gambar2.png" alt="">
+                        <img src="{{asset('assets/gambar2.png')}}" alt="">
                     <div class="event-desc">
                         <p><span style="font-weight: bolder;">Museum MACAN |</span><span style="font-size: 13px;"> Yayasan Museum MACAN</span></p>
                         <div class="ket-tanggal" style="display: flex; gap: 0.6rem;">
@@ -116,7 +116,7 @@
                 </div>
                 <div class="card">
                     <div class="left-side">
-                        <img src="assets/gmbr4.png" alt="">
+                        <img src="{{asset('assets/gmbr4.png')}}" alt="">
                     <div class="event-desc">
                         <p><span style="font-weight: bolder;">KINGS OF CONVENIENCE | </span><span style="font-size: 13px;">  Java Festival Production</span></p>
                         <div class="ket-tanggal" style="display: flex; gap: 0.6rem;">
@@ -148,7 +148,7 @@
                 </div>
                 <div class="card">
                     <div class="left-side">
-                        <img src="assets/card3.png" alt="">
+                        <img src="{{asset('assets/card3.png')}}" alt="">
                     <div class="event-desc">
                         <p><span style="font-weight: bolder;">Easter Concert-Jakarta Simfonia Orchestra | </span><span style="font-size: 13px;">  JAKARTA ORATORIO SOCIETY</span></p>
                         <div class="ket-tanggal" style="display: flex; gap: 0.6rem;">
@@ -178,6 +178,42 @@
                         </div>
                     </div>
                 </div>
+
+                @foreach($event as $i)
+
+                <div class="card">
+                    <div class="left-side">
+                        <img class="left-side-img" src="{{asset('picture/bebek.jpg')}}" alt="">
+                    <div class="event-desc">
+                        <p><span style="font-weight: bolder;">{{$i->Nama_Event}} |</span><span style="font-size: 13px;"> {{$i->Nama_Organizer}}</span></p>
+                        <div class="ket-tanggal" style="display: flex; gap: 0.6rem;">
+                            <i class="fas fa-calendar-alt"></i>
+                            <p>{{$i->Tanggal_Event}}</p>
+                        </div>
+                        <div class="ket-tempat" style="display: flex; gap: 0.6rem;">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>{{$i->Lokasi_Event}}</p>
+                        </div>
+                        <div class="descr-event" style="display: flex; gap: 0.8rem; margin-left: 3px; width: 600px;">
+                            <i class="fa-solid fa-info"></i>
+                            <p>{{$i->Deskripsi_Event}}</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="right-side">
+                        <div class="register-section">
+                            <button id="reg-btn"><a href="/create-ticket/{{$i->id}}">Register</a></button>
+                            <div class="cp">
+                                <i class="fa-solid fa-user"></i>
+                                <p>{{$i->Nama_Organizer}}</p>
+                                <p>+62 815 9123 1283</p>
+                            </div>
+                            <p class="price">{{$i->Harga}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                @endforeach
                 
             </div>
         </div>
@@ -185,7 +221,7 @@
 
     <footer>
         <div id="copyright">
-            <img src="assets/LogoFooter.png" alt="">
+            <img src="{{asset('assets/LogoFooter.png')}}" alt="">
             <p>© 2023 MyEvent. All Right Reserved</p>
         </div>
         <div id="privacy-terms">

@@ -43,6 +43,18 @@
         </div>
     </nav>
 
+    @foreach($ticket as $i)
+
+            <div class="card-list">
+                <p>Name: {{$i->Nama_Event}}</p>
+                <p>Event Organizer: {{$i->Nama_Organizer}}</p>
+                <p>Category: {{$i->Kategori_Event}}</p>
+                <p>Date: {{$i->Tanggal_Event}}</p>
+                <p>Location: {{$i->Lokasi_Event}}</p>
+            </div>
+
+        @endforeach
+
     <div id="ticket-container">
         <div id="left">
             <img src="assets/Apple.png" alt="">
