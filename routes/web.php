@@ -28,4 +28,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/view-event', [EventController::class, 'viewEvent']);
+Route::get('/create-event', [EventController::class, 'createEvent']);
+
+Route::get('/view-ticket', [TicketController::class, 'viewAllTicket']);
+Route::get('/create-ticket/{id}', [TicketController::class, 'store']);
+
+Route::get('/admin-view-ticket', [EventController::class, 'viewadminEvent']);
+Route::post('/store-event', [EventController::class, 'store']);
+
 require __DIR__.'/auth.php';
